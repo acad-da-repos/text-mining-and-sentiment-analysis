@@ -1,1 +1,2 @@
-nltk
+# No external dependencies required
+# This assignment uses only built-in Python libraries (re, string)
