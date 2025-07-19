@@ -3,17 +3,15 @@ import nltk
 from nltk.sentiment import SentimentIntensityAnalyzer
 from nltk.tokenize import word_tokenize
 
-def _download_nltk_data():
-    try:
-        nltk.data.find('tokenizers/punkt')
-    except LookupError:
-        nltk.download('punkt', quiet=True)
-    try:
-        nltk.data.find('sentiment/vader_lexicon')
-    except LookupError:
-        nltk.download('vader_lexicon', quiet=True)
-
-_download_nltk_data()
+# Download necessary NLTK data (run once)
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    nltk.download('punkt', quiet=True)
+try:
+    nltk.data.find('sentiment/vader_lexicon')
+except LookupError:
+    nltk.download('vader_lexicon', quiet=True)
 
 def tokenize_text(text):
   """
@@ -26,7 +24,8 @@ def tokenize_text(text):
     A list of words.
   """
 
-  return word_tokenize(text)
+  # Your code here
+  return None
 
 def analyze_sentiment(text):
   """
@@ -39,6 +38,5 @@ def analyze_sentiment(text):
     The compound sentiment score.
   """
 
-  analyzer = SentimentIntensityAnalyzer()
-  vs = analyzer.polarity_scores(text)
-  return vs['compound']
+  # Your code here
+  return None
